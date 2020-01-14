@@ -1,0 +1,18 @@
+dubbo:
+  application:
+    name: dubbo-provider-demo
+  protocol:
+    port: 20880
+  #    serialization: kryo
+  registry:
+    address: zookeeper://10.1.7.46:2181
+    simplified: false
+    register: false
+
+spring:
+  profiles:
+    include: nacos
+    active: public
+
+server:
+  port: 8081
